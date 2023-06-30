@@ -3,14 +3,15 @@ grfile = open('gr_semanal.txt', "a")
 
 #Loop for make easy put all data, choose number 3 to break the loop
 gramage = 0
-food = ''
+food = None
+lstfood = dict()
 while True:
-    print('Qué quieres hacer?\n1 = Agregar alimento\n2 = Agregar cantidad\n3 = Salir')
+    print('Qué quieres hacer?\n1 = Agregar alimento\n2 = Agregar cantidad\n3 = Guardar en diccionario\n4 = Salir')
     action = int(input('Seleccione: '))
     if action == 1:
         food = input('Introduzca un alimento: ')
     if action == 2:
-        #Loop for enter infinite quantities, press 0 to break it
+        #Loop for enter and sum infinite quantities, press 0 to break it
         while True:
             print('Para salir introducir 0')
             gr = int(input('Agrega los gramos: '))
@@ -19,9 +20,16 @@ while True:
             else:
                 gramage += gr
     elif action == 3:
+        if gramage is None or food is None:
+            print(str.upper("Atención ningún gramo o alimento añadido!"))
+        else:
+            lstfood[food] = str(gramage)
+            gramage = None
+            print('Guardado:', lstfood)
+    elif action == 4:
         break
 
-lstfood = dict()
-lstfood[food] = gramage
+
+
 
 grfile.write(str(lstfood))

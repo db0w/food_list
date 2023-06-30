@@ -10,6 +10,7 @@ while True:
     if action == 1:
         food = input('Introduzca un alimento: ')
     if action == 2:
+        #Loop for enter infinite quantities, press 0 to break it
         while True:
             print('Para salir introducir 0')
             gr = int(input('Agrega los gramos: '))
@@ -17,6 +18,10 @@ while True:
                 break
             else:
                 gramage += gr
-                print('Total:', gramage)
     elif action == 3:
         break
+
+lstfood = dict()
+lstfood[food] = gramage
+
+grfile.write(str(lstfood))

@@ -7,7 +7,7 @@ food = None
 lstfood = dict()
 
 while True:
-    print('Qué quieres hacer?\n1 = Agregar alimento\n2 = Agregar cantidad\n3 = Guardar en diccionario\n4 = Salir')
+    print('Qué quieres hacer?\n1 = Agregar alimento\n2 = Agregar cantidad\n3 = Guardar en diccionario\n4 = Salir\n5 = Mostrar lista')
     action = int(input('Seleccione: '))
     if action == 1:
         food = input('Introduzca un alimento en minúsculas, sin acentos, singular y con "_" como separación: ')

@@ -1,5 +1,25 @@
-# test_git
-Test upload from Git
+# FOOD LIST
 
-Practicing Git commands and fixing conflict. <br>
-Trying to change some code in GitHub and in VS Code at the same time. Next try to push without local commit in Git. Commit done but don't pull and merge in local done. Fix all and make push success.
+> This is a simple calculator. Enter a food and a quantity or weight in grams to make a list of total of each food.
+
+I write this code because I have now a extremely food control. First I organized each food quantity or weight per day. Since I shop once a week, I want to know the total quantity or weight of each food I must buy.
+With this code you can enter first the food and next the quantity. If the food already exists in the list, sum the new quantity with others.
+
+
+## With the first version you can:
+
+> First of all, it's important to make a text file in the same directory of the .py. The name must be: "gr_semanal.txt"
+
+1. Run the code <br>
+2. Choose one option what are describe with a print statement. <br>
+
+### OPTIONS:
+
+1. **ENTER FOOD:** with low case, without white spaces, use "_" between words instead, singular words. This allow the program to understand when one food already exists.
+2. **ENTER QUANTITY:** is an integer because is thinking to add grams or quantity not kilo.
+3. **SAVE IN THE LIST:** This is *IMPORTANT* because, this option add the entered data in the list. Only save one food and one quantity per time.
+4. **EXIT:** finish the data enter. When press the exit button, the program save all the list in the text file.
+5. **PRINT THE LIST:** print the list with the saved data.
+
+---
+> This is a practice, I understand this code isn't perfect, have bugs and bad annotations. I'm sorry if you have a bad experience with it. It will be a pleasure to ear all of the critics, this makes me better. Thank you for check and comment.

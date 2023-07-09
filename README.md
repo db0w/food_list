@@ -8,8 +8,6 @@ With this code you can enter first the food and next the quantity. If the food a
 
 ## With the first version you can:
 
-> First of all, it's important to make a text file in the same directory of the .py. The name must be: "gr_semanal.txt"
-
 1. Run the code <br>
 2. Choose one option what are describe with a print statement. <br>
 

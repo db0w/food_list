@@ -15,7 +15,7 @@ With this code you can enter first the food and next the quantity. If the food a
 
 Write from 1 to 4 if want use the program:
 
-1. **ENTER FOOD:** with low case, without white spaces, use "_" between words instead, singular words. This allow the program to understand when one food already exists.
+1. **ENTER FOOD:** this program have a switcher internal convention. One of this is switch spanish plural word into spanish singular word.
 2. **ENTER QUANTITY:** is an integer because is thinking to add grams or quantity not kilo.
 3. **SAVE IN THE LIST:** This is *IMPORTANT* because, this option add the entered data in the list. Only save one food and one quantity per time.
 4. **PRINT THE LIST:** print the list with the saved data.

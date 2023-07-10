@@ -4,7 +4,7 @@ wfile = open('gr_semanal.txt', "w")
 #WRITE PART
 # Variables to save data from loop for write in dictionary
 gramage = 0
-food = None
+food = ''
 
 # Dictionary that have all the entered data for write in a file text
 lstfood = dict()
@@ -18,8 +18,22 @@ while True:
     action = input('Seleccione: ')
 
     if action == '1':
+        # Turn food variable to empty
+        food = ''
         # Input with print, explain how must user write the food name
-        food = input('Introduzca un alimento en minúsculas, sin acentos, singular y con "_" como separación: ')
+        inpfood = input('Introduzca un alimento: ')
+        # Switch inpfood to internal name convention
+        for f in inpfood:
+            if f.isupper():
+                f = str.lower(f)
+            if f==' ':
+                f = '%'
+            food += f
+        # Switch spanish plural to spanish singular
+        if food.endswith('es'):
+            food = food[:-2]
+        elif food.endswith('s'):
+            food = food[:-1]
         # Iterate throw dictionay to find food already entered
         for key,value in lstfood.items():
             if food == str(key):
@@ -37,7 +51,7 @@ while True:
                 gramage += gr
     elif action == '3':
         # First prevent if no food or gramage was added, else add food and gramage in dictionary
-        if gramage is 0 or food is None:
+        if gramage is 0 or food is '':
             print(str.upper("Atención ningún gramo o alimento añadido!"))
         else:
             lstfood[food] = str(gramage)

@@ -5,6 +5,7 @@
 I write this code because I have now a extremely food control. First I organized each food quantity or weight per day. Since I shop once a week, I want to know the total quantity or weight of each food I must buy.
 With this code you can enter first the food and next the quantity. If the food already exists in the list, sum the new quantity with others.
 
+The program first read the text file and put the entered data into dictionary.
 
 ## With the first version you can:
 

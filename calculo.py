@@ -8,8 +8,8 @@ dfood = dict()
 rfile = open('gr_semanal.txt')
 for line in rfile:
     line.rstrip()
-    word = line.split()
-    dfood[word[0]] = word[2]
+    word = line.split() # Split lines (food = quantity)
+    dfood[word[0]] = word[2] # Name food is in index 0 and quantity in the third index
 
 # Infinite loop allow user enter infinite data
 while True:

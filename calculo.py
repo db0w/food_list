@@ -1,13 +1,9 @@
-# Write in an existing text file
-wfile = open('gr_semanal.txt', "w")
-
-#WRITE PART
 # Variables to save data from loop for write in dictionary
 gramage = 0
 food = ''
 
 # Dictionary that have all the entered data for write in a file text
-lstfood = dict()
+dfood = dict()
 
 # Infinite loop allow user enter infinite data
 while True:
@@ -35,7 +31,7 @@ while True:
         elif food.endswith('s'):
             food = food[:-1]
         # Iterate throw dictionay to find food already entered
-        for key,value in lstfood.items():
+        for key,value in dfood.items():
             if food == str(key):
                 print('Alimento ya agregado, actualizar', key, value)
                 food = key
@@ -54,21 +50,23 @@ while True:
         if gramage is 0 or food is '':
             print(str.upper("Atención ningún gramo o alimento añadido!"))
         else:
-            lstfood[food] = str(gramage)
+            dfood[food] = str(gramage)
             gramage = 0
-            print('Guardado:', lstfood)
+            print('Guardado:', dfood)
     elif action == '4':
         # Print dictionary to revise what food was entered
-        print(lstfood)
+        print(dfood)
     elif action == 'exit':
         # Break while loop
         break
 
-# Write dictionary into file text if this have data
-if lstfood != {}:
-    wfile.write(str(lstfood.items()))
+# Write dictionary into file text if dict have data
+if dfood != {}:
+    # Write in an existing text file
+    wfile = open('gr_semanal.txt', "w")
+    for f, q in dfood.items():
+        word = f + ' = ' + q + '\n'
+        wfile.write(word)
     print('Guardado!')
 else:
     print(str.upper('Diccionario vacío!'))
-
-#READER PART

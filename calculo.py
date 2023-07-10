@@ -4,6 +4,12 @@ food = ''
 
 # Dictionary that have all the entered data for write in a file text
 dfood = dict()
+# Read existing data and add it into dictionary
+rfile = open('gr_semanal.txt')
+for line in rfile:
+    line.rstrip()
+    word = line.split()
+    dfood[word[0]] = word[2]
 
 # Infinite loop allow user enter infinite data
 while True:
